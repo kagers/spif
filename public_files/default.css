@@ -1,0 +1,30 @@
+div.gc_up_mod_img {
+    background-image: url("images/calendar-icon.gif") !important;
+    float: left !important;
+    height: 42px !important;
+    margin-right: 6px !important;
+    width: 42px !important;
+	position:relative;
+	left:-4px;
+}
+div.gc_up_mod_month_background {
+    height: 14px !important;
+    margin-left: 4px !important;
+    margin-top: 5px !important;
+    width: 34px !important;
+}
+div.gc_up_mod_month_text {
+    font-size: 10px !important;
+    font-weight: bold !important;
+    margin-bottom: -11px !important;
+    margin-top: -20px!important;
+    padding: 2px !important;
+    position: relative !important;
+    text-align: center !important;
+}
+div.gc_up_mod_day {
+    font-size: 16px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width: 42px !important;
+}
