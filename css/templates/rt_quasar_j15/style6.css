@@ -37,20 +37,20 @@ h1, h2, h3, h4, h5 {color: #333;}
 #rt-showcase .readon:hover span {background: url(../../../images/templates/rt_quasar_j15/body/style6/readon-l.png) 0 -210px no-repeat;color: #fff;}
 
 /* Feature */
-/* #rt-feature {background: #0f0f0f url(../images/backgrounds/style6/header-bg.png) 100% 0;color: #aaa;}  */
+/* #rt-feature {background: #0f0f0f url(../../../images/templates/rt_quasar_j15/backgrounds/style6/header-bg.png) 100% 0;color: #aaa;}  */
 #rt-feature .title span {color: #ccc;}
 
 /* Main Body */
-.backgroundlevel-high #rt-toptab .shadow, .backgroundlevel-med #rt-toptab .shadow {background: url(../images/backgrounds/style6/showcase-shadow.png) 50% 100% no-repeat;}
+.backgroundlevel-high #rt-toptab .shadow, .backgroundlevel-med #rt-toptab .shadow {background: url(../../../images/templates/rt_quasar_j15/backgrounds/style6/showcase-shadow.png) 50% 100% no-repeat;}
 #rt-content-top {border-bottom: 1px dashed #aaa;}
 #rt-main-surround {background: #fff url(../../../images/templates/rt_quasar_j15/backgrounds/style6/body-bg.png) 50% 0 repeat-x;}
 #rt-main-surround .title span, #rt-main-surround .rt-article-title span {color: #000;}
 #rt-main-surround .readon span, #rt-main-surround .readon .button {color: #333;}
 #rt-main-surround .readon:hover span, #rt-main-surround .readon:hover .button {color: #000;}
-#form-login ul li a, #com-form-login ul li a, ul.rt-more-articles li a, .rt-section-list ul li a  {background-image: url(../images/body/style6/arrows.png);background-repeat: no-repeat;}
+#form-login ul li a, #com-form-login ul li a, ul.rt-more-articles li a, .rt-section-list ul li a  {background-image: url(../../../images/templates/rt_quasar_j15/body/style6/arrows.png);background-repeat: no-repeat;}
 
 /* Modules */
-.icon1 .module-icon, .icon2 .module-icon, .icon3 .module-icon, .icon4 .module-icon {background-image: url(../images/body/style6/module-icons.png);background-repeat: no-repeat;}
+.icon1 .module-icon, .icon2 .module-icon, .icon3 .module-icon, .icon4 .module-icon {background-image: url(../../../images/templates/rt_quasar_j15/body/style6/module-icons.png);background-repeat: no-repeat;}
 
 /* Bottom */
 #rt-bottom {color: #fff;}
@@ -75,15 +75,15 @@ h1, h2, h3, h4, h5 {color: #333;}
 .readon span, .readon .button {background: url(../../../images/templates/rt_quasar_j15/body/style6/readon-l.png) 0 0 no-repeat;color: #333;}
 .readon:hover span, .readon:hover .button {color: #000;}
 .rt-pagetitle {color: #333;}
-#rt-accessibility a.small .button, #rt-accessibility a.large .button, #rt-accessibility a.small:hover .button, #rt-accessibility a.large:hover .button {background-image: url(../images/body/style6/fontsizer.png);background-repeat: no-repeat;}
-.rokradios, .rokchecks, .rokradios-active, .rokchecks-active {background-image: url(../images/body/style6/inputs.png);}
+#rt-accessibility a.small .button, #rt-accessibility a.large .button, #rt-accessibility a.small:hover .button, #rt-accessibility a.large:hover .button {background-image: url(../../../images/templates/rt_quasar_j15/body/style6/fontsizer.png);background-repeat: no-repeat;}
+.rokradios, .rokchecks, .rokradios-active, .rokchecks-active {background-image: url(../../../images/templates/rt_quasar_j15/body/style6/inputs.png);}
 #rt-breadcrumbs {background: #fff;}
-#breadcrumbs-home {background: url(../images/body/style6/typography.png) 0 -23px no-repeat;}
-span.breadcrumbs img {background: url(../images/body/style6/arrows.png) 50% 4px no-repeat;}
+#breadcrumbs-home {background: url(../../../images/templates/rt_quasar_j15/body/style6/typography.png) 0 -23px no-repeat;}
+span.breadcrumbs img {background: url(../../../images/templates/rt_quasar_j15/body/style6/arrows.png) 50% 4px no-repeat;}
 
 /* Joomla Specific */
-.rt-joomla .icon {background-image: url(../images/body/style6/typography.png);}
-.rt-pollrow {background: url(../images/body/style6/body-div.png) 50% 100% repeat-x;}
+.rt-joomla .icon {background-image: url(../../../images/templates/rt_quasar_j15/body/style6/typography.png);}
+.rt-pollrow {background: url(../../../images/templates/rt_quasar_j15/body/style6/body-div.png) 50% 100% repeat-x;}
 .rt-joomla .search_result .phrase legend, .rt-joomla .search_result .only legend {color: #333;}
 .rt-joomla legend {color: #333;}
 .rt-joomla label {color: #333;}
@@ -91,11 +91,11 @@ span.breadcrumbs img {background: url(../images/body/style6/arrows.png) 50% 4px 
 .button2-left a, .button2-right a, .button2-left span, .button2-right span {color: #666;}
 .button2-left span, .button2-right span {color: #666;}
 .button2-left a:hover, .button2-right a:hover {color: #000 !important;}
-.button2-left {background: url(../images/system/light/j_button2_left.png) no-repeat;color: #666;}
-.button2-right {background: url(../images/system/light/j_button2_right.png) 100% 0 no-repeat;color: #666;}
-.button2-left .image {background: url(../images/system/light/j_button2_image.png) 100% 0 no-repeat;}
-.button2-left .readmore {background: url(../images/system/light/j_button2_readmore.png) 100% 0 no-repeat;}
-.button2-left .pagebreak {background: url(../images/system/light/j_button2_pagebreak.png) 100% 0 no-repeat;}
+.button2-left {background: url(../../../images/templates/rt_quasar_j15/system/light/j_button2_left.png) no-repeat;color: #666;}
+.button2-right {background: url(../../../images/templates/rt_quasar_j15/system/light/j_button2_right.png) 100% 0 no-repeat;color: #666;}
+.button2-left .image {background: url(../../../images/templates/templates/rt_quasar_j15/rt_quasar_j15/system/light/j_button2_image.png) 100% 0 no-repeat;}
+.button2-left .readmore {background: url(../../../images/templates/rt_quasar_j15/system/light/j_button2_readmore.png) 100% 0 no-repeat;}
+.button2-left .pagebreak {background: url(../../../images/templates/rt_quasar_j15/system/light/j_button2_pagebreak.png) 100% 0 no-repeat;}
 .button2-left .blank {background: url(../images/system/light/j_button2_blank.png) 100% 0 no-repeat;}
 body .button2-left .linkmacro {background: url(../images/system/light/j_button2_rokcandy.png) 100% 0 no-repeat;}
 .button2-left .blank a {color: #666;}

@@ -87,7 +87,7 @@ a:hover {text-decoration:underline;}
 
 /* Side Menus */
 #rt-main-surround ul.menu li {border-bottom:#aaa dashed 1px;}
-#rt-main-surround ul.menu li a, #rt-main-surround ul.menu li .separator, #rt-main-surround ul.menu li .item {background: url(../images/body/style6/arrows.png) no-repeat 5px 13px transparent;}
+#rt-main-surround ul.menu li a, #rt-main-surround ul.menu li .separator, #rt-main-surround ul.menu li .item {background: url(../../../images/templates/rt_quasar_j15/body/style6/arrows.png) no-repeat 5px 13px transparent;}
 #rt-main-surround ul.menu li.active > a, #rt-main-surround ul.menu li > a:hover, #rt-main-surround ul.menu li.active > .separator {color: #000;}
 #rt-main-surround ul.menu {padding-left: 0;}
 #rt-main-surround ul.menu li {list-style: none;margin-left:0;}
