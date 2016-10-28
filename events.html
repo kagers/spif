@@ -404,7 +404,14 @@ jQuery(document).ready(function(){
 	<script type="text/javascript">
 	  jQuery(document).ready(function(){
 	  jQuery(function () {
-	  jQuery('#rt-header').load('nav.html');
+	  jQuery.ajax({
+	  url: 'nav.html',
+	  dataType: 'html',
+	  success: function(html) {
+	  jQuery('#rt-header').html(html);
+	  }
+	  });
+	  //jQuery('#rt-header').load('nav.html');
 	  var scrollDiv = document.createElement("div");
 	  jQuery(scrollDiv).attr("id", "toTop").html("Back to Top").appendTo("body");    
 	  jQuery(window).scroll(function () {
