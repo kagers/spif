@@ -1,0 +1,911 @@
+* {
+
+	margin:0;
+	padding:0;
+	
+} 
+
+html, body {
+
+	height: 100%;
+	font-family: arial, helvetica, sans-serif;
+	overflow: hidden;
+
+}
+
+html {
+
+
+}
+
+body {
+
+	background-image: url('css-ref/background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+#toolPalette {
+	
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	bottom: 0px;
+	width: 161px;
+
+}
+
+	#toolPaletteTop {
+
+		height: 36px;
+		width: 161px;
+		background-image: url('css-ref/toolPaletteBGTop.png');
+
+	}
+
+	#toolPaletteBody {
+
+		position: absolute;
+		top: 36px;
+		bottom: 116px;
+		width: 161px;
+		background-image: url('css-ref/toolPaletteBGTile.png');
+		
+
+	}
+	
+	#toolPaletteBody div {
+	
+		width: 161px;
+		height: 50px;
+		cursor: pointer;
+		background-image: url('css-ref/toolPaletteButtonBG.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-bottom: 5px;
+	
+	}
+	
+		#toolPaletteBody div img {
+		
+			margin-left: 13px;
+			margin-top: 8px;
+		
+		}
+	
+	#toolPaletteBody div:hover {
+	
+		background-image: url('css-ref/toolPaletteButtonBGon.png');
+		
+	}
+	
+	#toolPaletteBody .disabled {
+	
+		opacity: 0.5;
+		background-image: url('css-ref/toolPaletteButtonBG.png') !important; /*prevents hover action*/
+		cursor: default;
+	
+	}
+		
+	#toolPaletteBottom {
+
+		position: absolute;
+		bottom: 0px;
+		height: 116px;
+		width: 161px;
+
+	}
+	
+#queuePalette {
+
+	position: absolute;
+	left: 181px;
+	bottom: 20px;
+	right: 20px;
+	height: 92px;
+	
+}
+
+	#queuePaletteLeft {
+	
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 92px;
+		width: 6px;
+		background-image: url('css-ref/queuePaletteBGLeft.png');
+		
+	}
+	
+	#queuePaletteMiddle {
+	
+		position: absolute;
+		left: 6px;
+		right: 173px;
+		height: 92px;
+		background-image: url('css-ref/queuePaletteBGTile.png');
+		
+	}
+	
+	#queuePaletteRight {
+	
+		position: absolute;
+		top: 0px;
+		right: 160px;
+		height: 92px;
+		width: 13px;
+		background-image: url('css-ref/queuePaletteBGRight.png');
+	
+	}
+	
+	#queuePaletteFarRight {
+	
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 92px;
+		width: 160px;
+		background-image: url('css-ref/queuePaletteBGFarRight.png');
+		text-align: center;
+	
+	}
+				
+		#solCounter {
+		
+			color: #ddd;
+			font-size: 16px;
+			margin-top: 5px;
+			height: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+					
+		}
+		
+		#solCount {
+			
+			
+		}
+	
+		#goButton {		
+			width: 161px;
+			height: 50px;
+			text-align: center;
+			cursor: pointer;
+			background-image: url('css-ref/toolPaletteButtonBG.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			margin-top: 5px;
+			position: relative;
+			left: -1px;			
+		}
+		
+		#goButton.disabled {	
+			opacity: 0.5;
+			background-image: url('css-ref/toolPaletteButtonBG.png') !important; /*prevents hover action*/
+			cursor: default;		
+		}
+		
+		#goButton img {		
+			margin-top: 12px;		
+		}
+		
+		#goButton:hover {		
+			background-image: url('css-ref/toolPaletteButtonBGon.png');		
+		}
+		
+		
+	
+#mainContent {
+
+	position: absolute;
+	top: 30px;
+	left: 185px;
+	bottom: 115px;
+	right: 30px;
+	background-image: url('css-ref/10percentWhite.png');
+
+}	
+
+	#mainContent .dataReview {
+	
+		background-image: url('css-ref/50percentBlack.png');
+		cursor: default;
+		color: #ccc;
+	
+	}
+	
+#treeControlPane {
+
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 230px;
+	border-right: 1px solid #dd0101;
+	background-image: url('css-ref/35percentBlack.png');
+	overflow: auto;
+	
+}
+
+#treeControlPane * {
+
+	cursor: pointer;
+
+}
+
+#dataReviewPane {
+
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 231px;
+	right: 0px;
+	overflow: auto;
+	
+}
+
+	#dataReviewPane h1 {
+	
+		background-image: url('css-ref/dataReviewSolGradientBG.png');
+		background-size: 100% 100%;
+		padding: 5px 5px 5px 10px;
+
+	}
+	
+	#dataReviewPane .footprint {
+	
+		padding: 10px;
+	
+	}
+	
+	#dataReviewPane .footprint .description, #dataReviewPane .justification {
+
+		font-style: italic;
+		color: #00aeff;
+		font-size: 14px;
+	
+	}
+
+        #dataReviewPane .justification strong {
+        
+            font-weight: bold;
+            font-style: normal;
+            color: #ccc;
+        
+        }
+
+        #dataReviewPane .justification {
+        
+            padding: 10px;
+        
+        }
+
+	#modalInner .instrument, #dataReviewPane .instrument {
+
+		width: 90px;
+		height: 28px;
+		background-image: url('css-ref/35percentBlack.png');
+		float: left;
+		padding: 5px;
+		margin-right: 10px;
+	
+	}
+		
+		#modalInner .instrument img, #dataReviewPane .instrument img {
+
+			margin-top: 2px;
+			margin-bottom: 7px;
+		
+		
+		}
+		
+		#modalInner .instrument .timeUnit, #dataReviewPane .instrument .timeUnit {
+		
+			width: 8px;
+			height: 6px;
+			margin-right: 1px;
+			float: left;
+			background-image: url('css-ref/20percentWhite.png');
+		
+		}
+		
+		#modalInner .instrument .on, #dataReviewPane .instrument .on {
+
+			background-image: none;
+			background-color: #00aeff;
+		
+		}
+	
+	#dataReviewPane .observation {
+		
+		margin-top: 10px;
+		padding: 10px;
+		background-image: url('css-ref/20percentBlack.png');
+		
+	}
+	
+	#dataReviewPane .imageHolder {
+		
+		margin-top: 5px;
+		padding: 5px;
+		border: 1px solid #503333;
+		max-width: 100%;
+		text-align: center;        
+		
+	}
+	
+	#dataReviewPane .imageHolder:hover {
+	
+		background-image: url('css-ref/35percentBlack.png');
+		border-color: #00aeff;
+	
+	}
+	
+	#dataReviewPane img {
+	
+		max-width: 100%;
+		max-height: 200px;
+		cursor: pointer;
+	
+	}
+	
+	#dataReviewPane p {
+		
+		margin-top: 10px;
+		font-size: 15px;
+		text-indent: 20px;
+		
+	}
+
+.footprint {
+
+    fill: #00f;
+
+}
+
+    .footprint:hover {
+    
+        fill: #f00;
+    
+    }
+
+.selectedFootprint {
+
+    fill: #0f0;
+   
+}
+
+.viewOutline
+{
+    position: absolute;
+    border: 1px solid #0f0;
+    background-color: rgba(0, 255, 0, .6);
+    opacity: .6;
+    z-index:22;
+}
+
+#mapHolder {
+	
+	position: absolute;
+	right: -1px;
+	width: 300px;
+	top: -1px;
+	height: 403px;
+	z-index: 1;
+
+}
+
+#miniNavMap {
+	
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	left: 5px;
+	height: 161px;
+
+}
+
+#miniViewMap {
+
+	position: absolute;
+	right: 5px;
+	top: 175px;
+	left: 5px;
+	bottom: 154px;
+    overflow: hidden;
+}
+
+#minimapImage {
+
+    width: 288px; 
+    height: 161px;
+
+}
+
+#miniFrontHazCam {
+
+	position: absolute;
+	right: 152px;
+	top: 255px;
+	left: 5px;
+	bottom: 5px;
+
+}
+
+#miniRearHazCam {
+
+	position: absolute;
+	right: 5px;
+	top: 255px;
+	left: 153px;
+	bottom: 5px;
+
+}
+
+#mapHolder:hover .miniLabel {
+
+	display: block;
+
+}
+
+.miniLabel {
+
+	position: absolute;
+	bottom: 0px;
+	left: 1px;
+	right: 0px;
+	height: 15px;
+	font-size: 10px;
+	line-height: 15px;
+	color: #eee;
+	padding-left: 3px;
+	background-image: url('css-ref/gradientLabelBG.png');
+	background-size: 100% 100%;
+	display: none;
+	
+}
+
+#tabHolder {
+
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	height: 39px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+.topTab {
+
+	float: left;
+	margin-top: 14px;
+	height: 25px;
+	padding: 0px 20px 0px 20px;
+	cursor: pointer;
+	font-size: 15px;
+	line-height: 25px;
+	margin-right: 2px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #222;
+	border: 1px solid #dd0101;
+	background-image: url('css-ref/10percentWhite.png');
+
+}
+
+.topTab:hover {
+
+	background-image: url('css-ref/hoverGradientBG.png');
+	height: 30px;
+	margin-top: 9px;
+	line-height: 30px;
+	color: #bbb;
+
+
+}
+
+.topTabSelected {  /* Important prevents the .topTab:hover from overriding the selected settings */
+
+	height: 35px !important;
+	margin-top: 4px !important;
+	line-height: 35px !important;
+	font-size: 18px;
+	cursor: default;
+	color: #ccc !important;
+	background-image: url('css-ref/20percentWhite.png') !important;
+	
+}
+
+#mapToggle {
+       
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    height: 19px;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+       
+}
+
+	#mapToggle:hover, #menuButton:hover {
+	
+		background-image: url('css-ref/hoverGradientBG.png');
+		background-size: 100% 100%;
+	
+	}
+
+#menuButton {
+       
+    position: absolute;
+    top: -23px;
+    right: -1px;
+    height: 19px;
+    padding: 2px 20px 0px 20px;
+    cursor: pointer;
+       
+}
+
+#imageArea, #dataReviewTab {
+
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+    overflow:hidden;
+    cursor:pointer;
+
+}
+		
+#actionQueue {
+	
+	margin-top: 12px;
+	height: 68px;
+	width: 100%;
+	background-image: url('css-ref/actionQueueGradientBG.png');
+
+}
+
+	#actionQueue tr {
+	
+		vertical-align: top;
+		
+	}
+	
+	#actionQueue td {
+
+		background-image: url('css-ref/actionQueueGradientBG.png');
+
+	}
+	
+		#actionQueue td img {
+		
+			position: relative;
+			top: 5px;
+			left: 5px;
+			opacity: 0.9;
+		}
+	
+	#actionQueue .filled {
+	
+		background-image: url('css-ref/actionQueueGradientFilledBG.png');
+		
+	}
+	
+	#actionQueue .filled:hover {
+	
+		background-image: url('css-ref/hoverActionQueueGradientBG.png');
+		cursor: pointer;
+		
+	}
+	
+	#actionQueue .filled:hover img {
+	
+		opacity: 1;		
+		
+	}
+	
+#modal {
+
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1000;
+	background-image: url('css-ref/75percentBlack.png');
+	text-align: center;    
+
+}
+
+	#modal.dialogBox {
+	
+		background-image: url('css-ref/35percentBlack.png');
+		
+	}
+
+	#modalInner {
+	
+		position: absolute;
+		top: 50px;
+		bottom: 50px;
+		left: 50px;
+		right: 50px;
+		padding: 10px;
+		background-image: url('css-ref/75percentBlack.png');
+		border: 1px solid #dd0101;
+		box-shadow: 0px 0px 20px 10px #000; 
+		text-align: left;
+	
+	}
+	
+	#modal.dialogBox #modalInner {
+	
+		top: 100px;
+		left: 210px;
+		right: 55px;
+		bottom: 140px;
+	
+	}
+	
+	#modalInner h1 {
+	
+		font-size: 28px;
+		height: 30px;
+		color: #eee;
+	
+	}
+	
+	#modalInner h3 {
+	
+		font-size: 16px;
+		line-height: 23px;
+		color: #00aeff;
+		font-weight: normal;
+		font-style: italic;
+	
+	}
+
+    #modalImageScroller {
+
+        overflow: hidden;
+
+    }
+	
+	#modalImageScroller, #modalTextbox {
+		
+		border: 1px solid #dd0101;
+		position: absolute;
+		bottom: 70px;
+		top: 75px;
+		left: 10px;
+		right: 10px;        
+	
+	}
+
+    #modalTextbox {
+
+        padding: 10px;
+        color: #eee;
+
+    }
+
+        #modalTextbox p {
+        
+            margin-bottom: 10px;
+            line-height: 20px;
+
+        }
+
+        #modalTextbox textarea {
+
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            color: #eee;
+            border: 0px;
+            overflow: hidden;
+        
+        }
+
+    .button {
+        position: absolute;
+        text-align: center;
+		cursor: pointer;
+		background-image: url('css-ref/toolPaletteButtonBG.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-bottom: 5px;
+    }
+	
+	#queueButton {
+		bottom: 5px;
+		right: 5px;
+		width: 161px;
+		height: 50px;
+	}
+
+    #queueButton.disabled {
+	
+		opacity: 0.5;
+		background-image: url('css-ref/toolPaletteButtonBG.png') !important; /*prevents hover action*/
+		cursor: default;
+		
+	}
+	
+	#queueButton img, #cancelButton img {
+	
+		margin-top: 20px;
+		
+	}
+	
+	#cancelButton {
+		bottom: 5px;
+		left: 5px;
+		width: 161px;
+		height: 50px;
+	}
+	
+	
+	#closeButton {
+		bottom: 5px;
+		right: 5px;
+		width: 161px;
+		height: 50px;
+	}
+
+    #redXButton {
+		top: 10px;
+		right: 10px;
+		width: 15px;
+		height: 15px;
+	}
+
+    #saveButton {
+        padding-top: 30px;
+        top: 60px;
+        left: 30px;
+        width: 161px;
+		height: 50px;
+    }
+
+    #restoreButton {
+        padding-top: 30px;
+        top: 60px;
+        left: 230px;
+        width: 161px;
+		height: 50px;
+        cursor: pointer;
+    }
+
+    #restoreButton img {
+        position: relative;
+        top: 28px;
+        left: 38px;
+        cursor: pointer;
+    }
+
+    input.filePicker {
+	    position: relative;
+	    text-align: right;
+	    -moz-opacity: 0;
+	    filter: alpha(opacity: 0);
+	    opacity: 0;
+	    z-index: 2;
+	    width: 161px;
+	    height: 50px;
+        cursor: pointer;
+    }
+
+    #restartButton {
+        padding-top: 30px;
+        top: 140px;
+        left: 30px;
+        width: 161px;
+		height: 50px;
+    }
+
+    #downloadButton {
+        padding-top: 30px;
+        top: 140px;
+        left: 230px;
+        width: 161px;
+		height: 50px;
+    }
+
+    div.fakefile {
+	    position: absolute;
+	    top: 2px;
+	    left: 2px;
+	    z-index: 1;
+    }
+	
+	#closeButton img {	
+		margin-top: 16px;		
+	}
+	
+	.button:hover {	
+		background-image: url('css-ref/toolPaletteButtonBGon.png');				
+	}
+
+.zoomContainer {
+    width: 34px;
+    height: 73px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+}
+
+.zoomIn, .zoomOut {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.zoomIn {
+    background-image: url('images/zoomInWhite.png');	
+}
+
+.zoomIn:active {
+    background-image: url('images/zoomInWhite.png') !important;	
+}
+
+.zoomOut {
+    background-image: url('images/zoomOutWhite.png');	
+}
+
+.zoomOut:active {
+    background-image: url('images/zoomOutWhite.png') !important;	
+}
+
+.zoomIn:hover {
+    background-image: url('images/zoomInWhiteHover.png');	
+}
+
+.zoomOut:hover {
+    background-image: url('images/zoomOutWhiteHover.png');	
+}
+
+.zoomOut { 
+    top: 39px;
+}
+	
+.redBorderGlass {
+	background-image: url('css-ref/20percentWhite.png');
+	border: 1px solid #dd0101;	
+}
+
+.clear {	
+	clear: both;
+}
+
+.tipsy { font-size: 14px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 400px; padding: 5px 8px 4px 8px; text-align: left; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+  
+	.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+

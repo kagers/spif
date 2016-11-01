@@ -1,0 +1,51 @@
+.menuParent {
+
+	background-image: url('css-ref/dataReviewSolGradientBG.png');
+	padding: 3px 10px 3px 10px;
+	height: 25px;
+	line-height: 26px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ccc;
+
+}
+
+.menuParent:hover {
+
+	background-image: url('css-ref/dataReviewSolGradientBGhover.png');
+	color: #eee;
+
+}
+
+.subMenu {
+
+	background-image: url('css-ref/10percentWhite.png');
+	padding: 3px 10px 3px 20px;
+	font-size: 15px;
+	height: 20px;
+	color: #ccc;
+	
+}
+
+.subMenu:hover {
+
+	background-image: url('css-ref/20percentWhite.png');
+	color: #eee;
+
+}
+
+.switchcontent {
+
+	
+
+}
+
+.observationName {
+
+	padding: 1px 10px 1px 25px;
+	font-size: 14px;
+	line-height: 18px;
+	height: 18px;
+	color: #bbb;
+
+}

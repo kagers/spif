@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Mars EPO</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link href="treeControl.css" rel="stylesheet" type="text/css" />
+    <link href="Scripts/jqueryContextMenu/jquery.contextmenu.css" rel="stylesheet" type="text/css" />
+        
+    <script src="Scripts/lib/FileSaver.js"></script>
+    <script src="Scripts/lib/jquery.js"></script>
+    <script src="Scripts/jqueryContextMenu/jquery.contextmenu.js"></script>
+    <script src="Scripts/lib/linq.min.js"></script>
+    <script src="Scripts/lib/jquery.tipsy.js"></script>
+    <script src="Scripts/lib/Raphael-min.js"></script>
+    <script src="Scripts/lib/lodash.min.js"></script>
+    
+    <script src="MarsRover.js"></script>
+
+</head>
+	<body>
+	
+		<div id="toolPalette">
+		
+			<div id="toolPaletteTop"></div>
+
+				<div id="toolPaletteBody">
+					
+					<div id="apxsDiv">						
+						<img src="images/textAPXS.png" />
+					</div>
+					<div id="MBDiv">						
+						<img src="images/textMB.png" />
+					</div>
+					<div id="MIDiv" class="disabled">
+						<img src="images/textMI.png" />
+					</div>
+					<div id="MiniTESDiv">
+						<img src="images/textMiniTES.png" />
+					</div>
+					<div id="RATDiv" class="disabled">
+						<img src="images/textRAT.png" />
+					</div>
+					<div id="PancamDiv">
+						<img src="images/textPancam.png" />
+					</div>
+					
+				</div>
+				
+			<div id="toolPaletteBottom">
+				
+				<img src="images/toolPaletteBGBottom.png" />
+			
+			</div>
+			
+		</div>
+		
+		<div id="mainContent" class="redBorderGlass">
+		
+			<div id="tabHolder">
+				<div id="cameraTabButton" class="topTab topTabSelected">Planning</div>
+				<div id="dataReviewTabButton" class="topTab">Data Review</div>
+			</div>
+			
+			<div id="mapToggle" class="redBorderGlass">
+				<img id="mapToggleText" src="images/textHideMap.png" />
+			</div>
+
+            <div id="menuButton" class="redBorderGlass">
+                <img id="menuText" src="images/textMenu.png" />
+            </div>
+		
+			<div id="imageArea" class="redBorderGlass">
+				
+				<div id="mapHolder" class="redBorderGlass">
+				
+					<div id="miniNavMap" class="redBorderGlass">
+						<div class="miniLabel">Orbital View</div>					
+					</div>
+					
+					<div id="miniViewMap" class="redBorderGlass">
+						<div class="miniLabel">Navcam</div>
+					</div>
+					
+					<div id="miniFrontHazCam" class="redBorderGlass">
+						<div class="miniLabel">Front Hazcam</div>	
+					</div>
+					
+					<div id="miniRearHazCam" class="redBorderGlass">
+						<div class="miniLabel">Rear Hazcam</div>	
+					</div>
+				
+				</div>
+				
+			</div>
+
+            <div id="dataReviewTab" class="redBorderGlass dataReview">
+                <div id="treeControlPane"></div>
+                <div id="dataReviewPane"></div>
+            </div>
+		
+		</div>
+		
+		<div id="queuePalette">
+		
+			<div id="queuePaletteLeft"></div>
+			
+			<div id="queuePaletteMiddle">
+			
+				<table id="actionQueue">
+					<tr>
+						<td width="10%" class="filled">
+							<img src="images/textMiniTES.png" />
+						</td>
+						<td width="20%" class="filled">
+							<img src="images/textRAT.png" />
+						</td>
+						<td width="10%" class="filled">
+							<img src="images/textPancam.png" />
+						</td>
+						<td width="10%" class="filled">
+							<img src="images/textMB.png" />
+						</td>
+						<td width="10%">
+						</td>
+						<td width="10%">
+						</td>
+						<td width="10%">
+						</td>
+						<td width="10%">
+						</td>
+						<td width="10%">
+						</td>
+					</tr>
+	
+				</table>
+			
+			</div>
+			
+			<div id="queuePaletteRight"></div>
+			
+			<div id="queuePaletteFarRight">
+				
+                <div id="solCounter">
+                        Sol <span id="solCount">1</span>
+                </div>
+
+				<div id="goButton">
+					
+                    <img src="images/textUplink.png" />
+					
+				</div>
+			
+			</div>
+		
+		</div>
+
+
+	
+	</body>
+	
+</html>
