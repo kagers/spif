@@ -34,7 +34,7 @@
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ui/jquery-ui-1.7.3.custom.min.js"></script>
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ext/jquery.ba-hashchange.min.js"></script>
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ext/jquery.qtip-1.0.0.min.js"></script>
-    <script type="text/javascript">
+    <!---script type="text/javascript">
       jQuery.noConflict();// <![CDATA[ 
 jQuery(document).ready(function(){
 	var today = new Date();
@@ -184,7 +184,7 @@ jQuery(document).ready(function(){
 });
 // ]]>
       InputsExclusion.push('.content_vote')
-    </script>
+    </script-->
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Droid+Serif:700,700italic,400' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/templates/rt_quasar_j15/scroll.js"></script>
@@ -348,7 +348,12 @@ jQuery(document).ready(function(){
                 </div>
                 <div class="rt-block">
 	          <div id="rt-mainbody">
-	            <h1 class="rt-article-title">SPIF Events Calendar</h1><div id='gcalendar_component_loading' style="text-align: center;"><img src="images/components/com_gcalendar/ajax-loader.gif"  alt="loader" /></div><div id='gcalendar_component'></div><div id='gcalendar_component_popup' style="visibility:hidden" ></div><div style="text-align:center;margin-top:10px" id="gcalendar_powered"><a href="http://g4j.laoneo.net">Powered by GCalendar</a></div>
+	            <h1 class="rt-article-title">SPIF Events Calendar</h1>
+		    <!--div id='gcalendar_component_loading' style="text-align: center;"><img src="images/components/com_gcalendar/ajax-loader.gif"  alt="loader" /></div-->
+		    <div id='gcalendar_component'>
+		    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=971iktl8jaj52p9jdot4ja252o%40group.calendar.google.com" style="border-width:0" width="590" height="490" frameborder="0" scrolling="no"></iframe></div>
+		    <div id='gcalendar_component_popup' style="visibility:hidden" ></div>
+		    <div style="text-align:center;margin-top:10px" id="gcalendar_powered"><a href="http://g4j.laoneo.net">Powered by GCalendar</a></div>
 
 	          </div>
 		</div>
