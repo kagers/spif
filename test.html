@@ -13,6 +13,7 @@ function start() {
       calendarId: '971iktl8jaj52p9jdot4ja252o@group.calendar.google.com'
     });
   }).then(function(response) {
+    var r = response
     console.log(response.result);
   }, function(reason) {
     console.log('Error: ' + reason.result.error.message);
