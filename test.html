@@ -4,7 +4,7 @@
     <script>
     // For todays date;
     Date.prototype.today = function () { 
-        return ((this.getDate() < 10)?"0":"") + this.getDate() +"/"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) +"/"+ this.getFullYear();
+        return (this.getFullYear() +"-"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-"+(this.getDate() < 10)?"0":"") + this.getDate());
     }
 
     // For the time now
@@ -24,11 +24,11 @@
         });
       }).then(function(response) {
         console.log(response.result);
-        var evs = response.items;
+        var evs = response.result.items;
         var upcoming = [];
         console.log(new Date().today() + new Date().timeNow());
         for (var i = 0; i < evs.length; i++) {
-          if (evs[i].start > (new Date().today() + new Date().timeNow())) {
+          if (evs[i].start > (new Date().today() +'T'+ new Date().timeNow())) {
             upcoming.push(evs[i]);
           }
         }
@@ -47,7 +47,6 @@
         font-size: 100%;
         margin: 10px;
         color: #333;
-        background-color: #cecece;
       }
 
       time.icon
@@ -103,28 +102,6 @@
         letter-spacing: -0.05em;
         padding-top: 0.8em;
         color: #2f2f2f;
-      }
-
-      time.icon:hover, time.icon:focus
-      {
-        -webkit-animation: swing 0.6s ease-out;
-        animation: swing 0.6s ease-out;
-      }
-
-      @-webkit-keyframes swing {
-        0%   { -webkit-transform: rotate(0deg)  skewY(0deg); }
-        20%  { -webkit-transform: rotate(12deg) skewY(4deg); }
-        60%  { -webkit-transform: rotate(-9deg) skewY(-3deg); }
-        80%  { -webkit-transform: rotate(6deg)  skewY(-2deg); }
-        100% { -webkit-transform: rotate(0deg)  skewY(0deg); }
-      }
-
-      @keyframes swing {
-        0%   { transform: rotate(0deg)  skewY(0deg); }
-        20%  { transform: rotate(12deg) skewY(4deg); }
-        60%  { transform: rotate(-9deg) skewY(-3deg); }
-        80%  { transform: rotate(6deg)  skewY(-2deg); }
-        100% { transform: rotate(0deg)  skewY(0deg); }
       }
     </style>
   </head>
