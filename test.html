@@ -10,7 +10,7 @@ function start() {
   }).then(function() {
     // 3. Initialize and make the API request.
     console.log('init');
-    return gapi.client.calendar.events.get({
+    return gapi.client.calendar.list.get({
       calendarId: '971iktl8jaj52p9jdot4ja252o@group.calendar.google.com'
     });
   }).then(function(response) {
