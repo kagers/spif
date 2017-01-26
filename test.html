@@ -29,7 +29,8 @@
         var now = new Date(new Date().today() +'T'+ new Date().timeNow());
         console.log(now);
         for (var i = 0; i < evs.length; i++) {
-          console.log(new Date(evs[i].start));
+          console.log((evs[i].start.dateTime));
+          console.log(new Date(evs[i].start.dateTime));
           if (new Date(evs[i].start.dateTime) > now) {
             upcoming.push(evs[i]);
           }
