@@ -9,12 +9,15 @@ function start() {
     'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
   }).then(function() {
     // 3. Initialize and make the API request.
+    console.log('init');
     return gapi.client.calendar.events.get({
       calendarId: '971iktl8jaj52p9jdot4ja252o@group.calendar.google.com'
     });
   }).then(function(response) {
+    console.log('resp');
     console.log(response.result);
   }, function(reason) {
+    console.log('reas');
     console.log('Error: ');// + reason.result.error.message);
   });
 };
