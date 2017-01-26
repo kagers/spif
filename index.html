@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="css/modules/mod_djimageslider/style.css" type="text/css" />
     <style type="text/css">
       <!--
-	  #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;} body a {color:#db4a07;}
-	  body a, #rt-main-surround .rt-article-title, #rt-main-surround .title, #rt-showcase .title, #rt-showcase .showcase-title span, #rt-top .title, #rt-header .title, #rt-feature .title {color:#db4a07;}
+	  #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;}
+ body a {color:#db4a07;}
+	  body a, #rt-main-surround .rt-article-title, #rt-main-surround .title, #rt-showcase .title, #rt-showcase .showcase-title span, #rt-top .title, #rt-header .title, #rt-feature .title {color:#db4a07;}
+
 	  /* Styles for DJ Image Slider with module id 20 */
 	  #djslider-loader20 {
 	  margin: 0 auto;
@@ -141,7 +143,8 @@
     <script type="text/javascript" src="js/components/com_gantry/gantry-inputs.js"></script>
     <script type="text/javascript" src="js/modules/mod_djimageslider/slider.js"></script>
     <script type="text/javascript">
-      InputsExclusion.push('.content_vote')window.addEvent('domready',function(){var Slider20 = new DJImageSlider({id: '20', slider_type: 2, slide_size: 607, visible_slides: 1, show_buttons: 1, show_arrows: 1, preload: 800},{auto: 1, transition: Fx.Transitions.linear, duration: 600, delay: 8600})});
+      InputsExclusion.push('.content_vote')
+window.addEvent('domready',function(){var Slider20 = new DJImageSlider({id: '20', slider_type: 2, slide_size: 607, visible_slides: 1, show_buttons: 1, show_arrows: 1, preload: 800},{auto: 1, transition: Fx.Transitions.linear, duration: 600, delay: 8600})});
     </script>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Droid+Serif:700,700italic,400' rel='stylesheet' type='text/css'>
@@ -522,7 +525,7 @@
 		      <div class="module-title">
 	                <h2 class="title">Upcoming Events</h2>
 		      </div>
-	              <div class="module-content">
+	              <div class="module-content" id="upcoming">
 	                
 		      </div>
 		    </div>
