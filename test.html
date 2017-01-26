@@ -41,7 +41,7 @@
                       'September', 'October', 'November', 'December'];
         
         for (var i = 0; i < 4; i++) {
-          var curr = upcoming[i];
+          var curr = upcoming[i].start.dateTime;
           var div = document.createElement('div');
           div.className = 'event';
           div.innerHTML = '<time datetime="'+curr.toDateString()+'" class="icon">\
