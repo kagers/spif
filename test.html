@@ -2,12 +2,11 @@
   <head>
     <script src="https://apis.google.com/js/api.js"></script>
     <script>
-    // For todays date;
+    // todays date;
     Date.prototype.today = function () { 
         return this.getFullYear() +"-"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) + "-"+((this.getDate() < 10)?"0":"") + this.getDate();
     }
-
-    // For the time now
+    // time now
     Date.prototype.timeNow = function () {
          return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
     }
@@ -24,18 +23,34 @@
         });
       }).then(function(response) {
         console.log(response.result);
+        // filter out old events
         var evs = response.result.items;
         var upcoming = [];
         var now = new Date(new Date().today() +'T'+ new Date().timeNow());
         console.log(now);
         for (var i = 0; i < evs.length; i++) {
-          console.log((evs[i].start.dateTime));
-          console.log(new Date(evs[i].start.dateTime));
-          if (new Date(evs[i].start.dateTime) > now) {
+          //console.log((evs[i].start.dateTime));
+          //console.log(new Date(evs[i].start.dateTime));
+          if (new Date(evs[i].start.dateTime) > now) { // compare dates
             upcoming.push(evs[i]);
           }
         }
         console.log(upcoming);
+        var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',\
+                      'October', 'November', 'December'];
+        
+        for (var i = 0; i < 4; i++) {
+          var curr = upcoming[i];
+          var div = document.createElement('div');
+          div.className = 'event';
+          div.innerHTML = '<time datetime="'+curr.toDateString()+'" class="icon">\
+                            <em>'+days[curr.getDay()]+'</em>\
+                            <strong>'+months[curr.getMonth()]+'</strong>\
+                            <span>'+curr.getDate()+'</span>\
+                            </time>';
+          document.getElementById('upcoming').appendChild(div);
+        }
        }, function(reason) {
         console.log('Error: ' + reason);
        });
@@ -106,10 +121,12 @@
   </head>
   
   <body>
-    <time datetime="2014-09-20" class="icon">
-    <em>Saturday</em>
-    <strong>September</strong>
-    <span>20</span>
-    </time>
+    <div id="upcoming">
+      <time datetime="2014-09-20" class="icon">
+      <em>Saturday</em>
+      <strong>September</strong>
+      <span>20</span>
+      </time>
+    </div>
   </body>
 </html>
