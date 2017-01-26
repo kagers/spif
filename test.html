@@ -30,7 +30,7 @@
         console.log(now);
         for (var i = 0; i < evs.length; i++) {
           console.log(new Date(evs[i].start));
-          if (new Date(evs[i].start) > now) {
+          if (new Date(evs[i].start.dateTime) > now) {
             upcoming.push(evs[i]);
           }
         }
