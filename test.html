@@ -2,9 +2,7 @@
 
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
-
-// 1. Load the JavaScript client library.
-gapi.load('client', 'v3', function start() {
+function start() {
   // 2. Initialize the JavaScript client library.
   gapi.client.init({
     'apiKey': 'AIzaSyByFXi14Vw0rUsK0NM3O4QzoS5-FZElg6M',
@@ -15,11 +13,12 @@ gapi.load('client', 'v3', function start() {
       calendarId: '971iktl8jaj52p9jdot4ja252o@group.calendar.google.com'
     });
   }).then(function(response) {
-    var r = response
     console.log(response.result);
   }, function(reason) {
-    console.log('Error: ');// + reason.result.error.message);
+    console.log('Error: ' + reason.result.error.message);
   });
-};);
+};
+// 1. Load the JavaScript client library.
+gapi.load('client', start);
 </script>
 </html>
