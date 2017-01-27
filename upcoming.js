@@ -48,11 +48,11 @@
                                 <span>'+curr.getDate()+'</span>\
                                 </time>\
                                 '+'<h6 class="summary">'+upcoming[i].summary+'</h6>'+
-                                '<p class="summary">'+curr.getHours()+':'+curr.getMinutes()+' - '+
+                                '<br><p class="summary">'+curr.getHours()+':'+curr.getMinutes()+' - '+
                                 end.getHours()+':'+end.getMinutes()+'</p>';
               document.getElementById('upcoming').appendChild(div);
               document.getElementById('upcoming').appendChild(document.createElement('br'));
-              document.getElementById('upcoming').appendChild(document.createElement('br'));
+              //document.getElementById('upcoming').appendChild(document.createElement('br'));
             }
         }
        }, function(reason) {
