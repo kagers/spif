@@ -4,7 +4,7 @@
         display: block;
         position: relative;
         width: 7em;
-        height: 8.4em;
+        height: 8.2em;
         background-color: #fff;
         /*margin: 2em auto;*/
         border-radius: 0.6em;
@@ -28,9 +28,9 @@
         /*padding: 0.25em 0;*/
         color: #fff;
         background-color: #DB4A07;
-        border-bottom: 1px dashed #DB4A07;
+        /*border-bottom: 1px dashed #DB4A07;*/
         box-shadow: 0 2px 0 #DB4A07;
-        font-size: 1.4em;
+        font-size: 1.5em;
       }
       time.icon em
       {
@@ -44,7 +44,7 @@
         width: 100%;
         font-size: 2.5em;
         letter-spacing: -0.05em;
-        padding-top: 1.55em;
+        padding-top: 1.4em;
         color: #2f2f2f;
       }
       h6.summary
