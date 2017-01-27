@@ -42,7 +42,7 @@
               var end  = new Date(upcoming[i].end.dateTime);
               var div = document.createElement('div');
               div.className = 'event';
-              div.innerHTML = '<br><br><time datetime="'+curr.toDateString()+'" class="icon">\
+              div.innerHTML = '<time datetime="'+curr.toDateString()+'" class="icon">\
                                 <em>'+days[curr.getDay()]+'</em>\
                                 <strong>'+months[curr.getMonth()]+'</strong>\
                                 <span>'+curr.getDate()+'</span>\
@@ -51,6 +51,8 @@
                                 '<p class="summary">'+curr.getHours()+':'+curr.getMinutes()+' - '+
                                 end.getHours()+':'+end.getMinutes()+'</p>';
               document.getElementById('upcoming').appendChild(div);
+              document.getElementById('upcoming').appendChild(document.createElement('br'););
+              document.getElementById('upcoming').appendChild(document.createElement('br'););
             }
         }
        }, function(reason) {
