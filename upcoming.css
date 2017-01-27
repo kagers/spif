@@ -4,7 +4,7 @@
         display: block;
         position: relative;
         width: 7em;
-        height: 7em;
+        height: 8em;
         background-color: #fff;
         /*margin: 2em auto;*/
         border-radius: 0.6em;
@@ -30,12 +30,14 @@
         background-color: #DB4A07;
         border-bottom: 1px dashed #DB4A07;
         box-shadow: 0 2px 0 #DB4A07;
+        font-size: 1.5em;
       }
       time.icon em
       {
         position: absolute;
         bottom: 0.3em;
         color: #DB4A07;
+        font-size: 1.5em;
       }
       time.icon span
       {
