@@ -37,19 +37,21 @@
                       'September', 'October', 'November', 'December'];
         
         for (var i = 0; i < 4; i++) {
-          var curr = new Date(upcoming[i].start.dateTime);
-          var end  = new Date(upcoming[i].end.dateTime);
-          var div = document.createElement('div');
-          div.className = 'event';
-          div.innerHTML = '<time datetime="'+curr.toDateString()+'" class="icon">\
-                            <em>'+days[curr.getDay()]+'</em>\
-                            <strong>'+months[curr.getMonth()]+'</strong>\
-                            <span>'+curr.getDate()+'</span>\
-                            </time>\
-                            '+upcoming[i].summary+'<br>'+
-                            curr.getHours()+':'+curr.getMinutes()+' - '+
-                            end.getHours()+':'+end.getMinutes();
-          document.getElementById('upcoming').appendChild(div);
+            if (i < upcoming.length) {
+              var curr = new Date(upcoming[i].start.dateTime);
+              var end  = new Date(upcoming[i].end.dateTime);
+              var div = document.createElement('div');
+              div.className = 'event';
+              div.innerHTML = '<time datetime="'+curr.toDateString()+'" class="icon">\
+                                <em>'+days[curr.getDay()]+'</em>\
+                                <strong>'+months[curr.getMonth()]+'</strong>\
+                                <span>'+curr.getDate()+'</span>\
+                                </time>\
+                                '+upcoming[i].summary+'<br>'+
+                                curr.getHours()+':'+curr.getMinutes()+' - '+
+                                end.getHours()+':'+end.getMinutes();
+              document.getElementById('upcoming').appendChild(div);
+            }
         }
        }, function(reason) {
         console.log('Error: ' + reason);
