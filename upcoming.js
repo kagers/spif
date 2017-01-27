@@ -47,7 +47,7 @@
                                 <strong>'+months[curr.getMonth()]+'</strong>\
                                 <span>'+curr.getDate()+'</span>\
                                 </time>\
-                                '+'<h5 class="summary">'+upcoming[i].summary+'</h5>'+
+                                '+'<h6 class="summary">'+upcoming[i].summary+'</h6>'+
                                 curr.getHours()+':'+curr.getMinutes()+' - '+
                                 end.getHours()+':'+end.getMinutes();
               document.getElementById('upcoming').appendChild(div);
