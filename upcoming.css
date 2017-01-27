@@ -47,7 +47,8 @@
       }
       .summary
       {
-        color: #DB4A07;
+        /*color: #DB4A07;*/
         float: left;
+        padding: 15px;
       }
 
