@@ -1,13 +1,6 @@
-body
-      {
-        font-family: "Helvetica Neue Bold", arial, helvetica, sans-serif;
-        font-size: 100%;
-        margin: 10px;
-        color: #333;
-      }
       time.icon
       {
-        font-size: 0.5em; /* change icon size */
+        font-size: 0.75em; /* change icon size */
         display: block;
         position: relative;
         width: 7em;
@@ -32,15 +25,15 @@ body
         top: 0;
         padding: 0.4em 0;
         color: #fff;
-        background-color: #fd9f1b;
-        border-bottom: 1px dashed #f37302;
-        box-shadow: 0 2px 0 #fd9f1b;
+        background-color: #DB4A07;
+        border-bottom: 1px dashed #DB4A07;
+        box-shadow: 0 2px 0 #DB4A07;
       }
       time.icon em
       {
         position: absolute;
         bottom: 0.3em;
-        color: #fd9f1b;
+        color: #DB4A07;
       }
       time.icon span
       {
@@ -48,5 +41,5 @@ body
         font-size: 2.8em;
         letter-spacing: -0.05em;
         padding-top: 0.8em;
-        color: #2f2f2f;
+        color: #DB4A07;
       }
