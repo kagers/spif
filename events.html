@@ -20,7 +20,10 @@
       <link rel="stylesheet" href="css/components/com_gcalendar/libraries/jquery/themes/ui-lightness/jquery-ui-1.7.3.custom.css" type="text/css" />
       <style type="text/css">
       
-	 #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;}#ui-datepicker-div { z-index: 15; }.gcal-event_gccal_4,.fc-agenda gcal-event_gccal_4 .fc-event-time, .gcal-event_gccal_4 a, .gcal-event_gccal_4 span{background-color: #496bb0 !important; border-color: #2952A3; color: white;} body a {color:#db4a07;}
+	 #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;}
+#ui-datepicker-div { z-index: 15; }
+.gcal-event_gccal_4,.fc-agenda gcal-event_gccal_4 .fc-event-time, .gcal-event_gccal_4 a, .gcal-event_gccal_4 span{background-color: #496bb0 !important; border-color: #2952A3; color: white;}
+ body a {color:#db4a07;}
 	  body a, #rt-main-surround .rt-article-title, #rt-main-surround .title, #rt-showcase .title, #rt-showcase .showcase-title span, #rt-top .title, #rt-header .title, #rt-feature .title {color:#db4a07;}
 	
     </style>
@@ -32,157 +35,7 @@
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ui/jquery-ui-1.7.3.custom.min.js"></script>
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ext/jquery.ba-hashchange.min.js"></script>
     <script type="text/javascript" src="js/components/com_gcalendar/libraries/jquery/ext/jquery.qtip-1.0.0.min.js"></script>
-    <!---script type="text/javascript">
-      jQuery.noConflict();// <![CDATA[ 
-jQuery(document).ready(function(){
-	var today = new Date();
-	var tmpYear = today.getFullYear();
-	var tmpMonth = today.getMonth();
-	var tmpDay = today.getDate();
-	var tmpView = 'month';
-	var vars = window.location.hash.replace(/&amp;/gi, "&").split("&");
-	for ( var i = 0; i < vars.length; i++ ){
-		if(vars[i].match("^#year"))tmpYear = vars[i].substring(6);
-		if(vars[i].match("^month"))tmpMonth = vars[i].substring(6)-1;
-		if(vars[i].match("^day"))tmpDay = vars[i].substring(4);
-		if(vars[i].match("^view"))tmpView = vars[i].substring(5);
-	}
-	jQuery('#gcalendar_component').fullCalendar({
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
-		},
-		year: tmpYear,
-		month: tmpMonth,
-		date: tmpDay,
-		defaultView: tmpView,
-		editable: false, theme: false,
-       weekends: true,
-		titleFormat: { 
-			month: 'MMMM yyyy',
-			week: "MMM d[ yyyy]{ '—'[ MMM] d yyyy}",
-			day: 'dddd, MMM d, yyyy'},
-		firstDay: 0,
-		firstHour: 12,
-		maxTime: 24,
-		minTime: 0,
-		monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
-		monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-		dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-		dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-		timeFormat: { 
-			month: 'HH:mm{ - HH:mm}',
-			week: "HH:mm{ - HH:mm}",
-			day: 'HH:mm{ - HH:mm}'},
-			columnFormat: { month: 'ddd', week: 'ddd d', day: 'dddd d'},
-			axisFormat: 'HH:mm',
-			allDayText: ' all day',
-			buttonText: {
-			prev:     '&nbsp;&#9668;&nbsp;',
-			next:     '&nbsp;&#9658;&nbsp;',
-			prevYear: '&nbsp;&lt;&lt;&nbsp;',
-			nextYear: '&nbsp;&gt;&gt;&nbsp;',
-			today:    ' Today',
-			month:    ' month',
-			week:     ' week',
-			day:      ' day'
-		},
-		eventSources: [
-				//'/index.php?option=com_gcalendar&view=jsonfeed&format=raw&gcid=4&Itemid=13'	],
-		viewDisplay: function(view) {
-			var d = jQuery('#gcalendar_component').fullCalendar('getDate');
-			var newHash = 'year='+d.getFullYear()+'&month='+(d.getMonth()+1)+'&day='+d.getDate()+'&view='+view.name;
-			if(window.location.hash.replace(/&amp;/gi, "&") != newHash)
-			window.location.hash = newHash;
-		},
-		eventRender: function(event, element) {
-			if (event.description)
-				jQuery(element).qtip({
-					content: event.description,
-					position: {
-						corner: {
-							target: 'topLeft',
-							tooltip: 'bottomLeft'
-						}
-					},
-					style: { name: 'cream', tip: 'bottomLeft',
-						border: {
-							radius: 5,
-							width: 1
-						}
-					}
-				});
-		},
-		eventClick: function(event) {
-		    if (event.url) {
-		        jQuery('<iframe src="'+event.url+'&tmpl=component" />').dialog({
-		           width: 900,
-		           height: 600,
-		           modal: true,
-		           autoResize: true,
-		           title: event.title
-		        }).width(880).height(580);
-		        return false;}
-		},
-		dayClick: function(date, allDay, jsEvent, view) {
-			jQuery('#gcalendar_component').fullCalendar('gotoDate', date).fullCalendar('changeView', 'agendaDay');
-		},
-		loading: function(bool) {
-			if (bool) {
-				jQuery('#gcalendar_component_loading').show();
-			}else{
-				jQuery('#gcalendar_component_loading').hide();
-			}
-		}
-	});
-	var custom_buttons ='<td style="padding-left:10px">'+
-			'<div class="fc-state-default fc-corner-left fc-corner-right fc-state-enabled">'+
-			'<input type="hidden" id="gcalendar_component_date_picker" value="">'+
-			'<a onClick="jQuery(\'#gcalendar_component_date_picker\').datepicker(\'show\');"><span> Jump'+
-			'</span></a>'+
-			'</div>'+
-			'</td>';
-	jQuery('div.fc-button-today').parent('td').after(custom_buttons);
-	jQuery("#gcalendar_component_date_picker").datepicker({
-		dateFormat: 'dd-mm-yy',
-		changeYear: true, 
-		dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-		dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-		dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],
-		monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
-		monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-		onSelect: function(dateText, inst) {
-			var d = jQuery('#gcalendar_component_date_picker').datepicker('getDate');
-			var view = jQuery('#gcalendar_component').fullCalendar('getView').name;
-			jQuery('#gcalendar_component').fullCalendar('gotoDate', d);
-		}
-	});
-	jQuery(window).bind( 'hashchange', function(){
-		var today = new Date();
-		var tmpYear = today.getFullYear();
-		var tmpMonth = today.getMonth();
-		var tmpDay = today.getDate();
-		var tmpView = 'month';
-		var vars = window.location.hash.replace(/&amp;/gi, "&").split("&");
-		for ( var i = 0; i < vars.length; i++ ){
-			if(vars[i].match("^#year"))tmpYear = vars[i].substring(6);
-			if(vars[i].match("^month"))tmpMonth = vars[i].substring(6)-1;
-			if(vars[i].match("^day"))tmpDay = vars[i].substring(4);
-			if(vars[i].match("^view"))tmpView = vars[i].substring(5);
-		}
-		var date = new Date(tmpYear, tmpMonth, tmpDay,0,0,0);
-		var d = jQuery('#gcalendar_component').fullCalendar('getDate');
-		var view = jQuery('#gcalendar_component').fullCalendar('getView');
-		if(date.getFullYear() != d.getFullYear() || date.getMonth() != d.getMonth() || date.getDate() != d.getDate())
-			jQuery('#gcalendar_component').fullCalendar('gotoDate', date);
-		if(view.name != tmpView)
-			jQuery('#gcalendar_component').fullCalendar('changeView', tmpView);
-	});
-});
-// ]]>
-      InputsExclusion.push('.content_vote')
-    </script-->
+    
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Droid+Serif:700,700italic,400' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/templates/rt_quasar_j15/scroll.js"></script>
@@ -204,6 +57,9 @@ jQuery(document).ready(function(){
 	
 	<script language=JavaScript id=onDate ></script>
 	<script language=JavaScript src=js/media/system/stat6fa.php ></script>
+	<script src="https://apis.google.com/js/api.js"></script>
+	<script src="js/upcoming.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/upcoming.css">
       </head>
       <body  class="backgroundlevel-high bodylevel-high cssstyle-style6 font-family-geneva font-size-is-default col12 calendar-">
 	<div id="rt-top">
@@ -388,7 +244,7 @@ jQuery(document).ready(function(){
 	                  <h2 class="title">Upcoming Events</h2>
 			</div>
 	                <div class="module-content">
-	                  
+				<div id="upcoming"></div>
 			</div>
 		      </div>
 		    </div>
