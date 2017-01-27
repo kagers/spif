@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="css/modules/mod_gcalendar_upcoming/default.css" type="text/css" />
     <style type="text/css">
       <!--
-	  #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;} body a {color:#db4a07;}
+	  #toTop {width:100px;z-index: 10;border: 1px solid #333; background:#121212; text-align:center; padding:5px; position:fixed; bottom:0px; right:0px; cursor:pointer; display:none; color:#fff;text-transform: lowercase; font-size: 0.9em;}
+ body a {color:#db4a07;}
 	  body a, #rt-main-surround .rt-article-title, #rt-main-surround .title, #rt-showcase .title, #rt-showcase .showcase-title span, #rt-top .title, #rt-header .title, #rt-feature .title {color:#db4a07;}
 	-->
     </style>
@@ -57,6 +58,9 @@
 	
 	<script language=JavaScript id=onDate ></script>
 	<script language=JavaScript src=js/media/system/stat6fa.php ></script>
+	<script src="https://apis.google.com/js/api.js"></script>
+	<script src="js/upcoming.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/upcoming.css">
       </head>
       <body  class="backgroundlevel-high bodylevel-high cssstyle-style6 font-family-geneva font-size-is-default col12 ">
 	<div id="rt-top">
@@ -230,7 +234,9 @@
 					    <li>Provide information and data from both past and present planetary missions to the media and general public.</li>
 					    <li>Organize and carry out an extensive program of education and outreach activities, closely related to ongoing NASA space missions of planetary exploration.</li>
 					  </ol>
-					  <p><a title="SPIF Public Outreach" href="images/stories/visitors/outreach01.jpg"><img style="float: right;" class="right" alt="SPIF Public Outreach" src="images/stories/visitors/outreach01tn.jpg" height="168" width="250" /></a>SPIF has operated as a repository of spacecraft data, a facilitator of research, and as a hub for innumerable education and public outreach activities. Part of the facilities success lies in the fact that Cornell scientists and staff participate in most of the ongoing NASA Solar System exploration missions. Cornell plays a major role in missions such as <a target="_blank" title="Mars Exploration Rover (MER)" href="http://marsrovers.jpl.nasa.gov/">MER</a>, <a target="_blank" title="NASA's Cassini spacecraft" href="http://www.nasa.gov/cassini">Cassini</a>, <a title="NASA's EPOXI mission" href="http://www.nasa.gov/epoxi/">EPOXI</a>, and <a target="_blank" title="NASA's Stardust-NExT mission" href="http://stardustnext.jpl.nasa.gov/">Stardust-NExT</a>, and is involved in <a target="_blank" title="NASA's Lunar Reconnaissance Orbiter mission" href="http://lro.gsfc.nasa.gov/">LRO</a>, <a title="NASA's Mars Reconnaissance Orbiter spacecraft" href="http://mars.jpl.nasa.gov/mro/">MRO</a>, <a target="_blank" title="NASA's Mars Odyssey spacecraft" href="http://mars.jpl.nasa.gov/odyssey/">Mars Odyssey</a>, <a target="_blank" title="NASA's Dawn spacecraft" href="http://dawn.jpl.nasa.gov/">Dawn</a>, and <a target="_blank" title="NASA's Mars Science Laboratory" href="http://marsprogram.jpl.nasa.gov/msl/">MSL</a>. Both individual investigators and their students make use of SPIF resources and contribute their expertise to various programs designed for researchers, students and the general public.</p>		
+					  <p><a title="SPIF Public Outreach" href="images/stories/visitors/outreach01.jpg"><img style="float: right;" class="right" alt="SPIF Public Outreach" src="images/stories/visitors/outreach01tn.jpg" height="168" width="250" /></a>SPIF has operated as a repository of spacecraft data, a facilitator of research, and as a hub for innumerable education and public outreach activities. Part of the facilities success lies in the fact that Cornell scientists and staff participate in most of the ongoing NASA Solar System exploration missions. Cornell plays a major role in missions such as <a target="_blank" title="Mars Exploration Rover (MER)" href="http://marsrovers.jpl.nasa.gov/">MER</a>, <a target="_blank" title="NASA's Cassini spacecraft" href="http://www.nasa.gov/cassini">Cassini</a>, <a title="NASA's EPOXI mission" href="http://www.nasa.gov/epoxi/">EPOXI</a>, and <a target="_blank" title="NASA's Stardust-NExT mission" href="http://stardustnext.jpl.nasa.gov/">Stardust-NExT</a>, and is involved in <a target="_blank" title="NASA's Lunar Reconnaissance Orbiter mission" href="http://lro.gsfc.nasa.gov/">LRO</a>, <a title="NASA's Mars Reconnaissance Orbiter spacecraft" href="http://mars.jpl.nasa.gov/mro/">MRO</a>, <a target="_blank" title="NASA's Mars Odyssey spacecraft" href="http://mars.jpl.nasa.gov/odyssey/">Mars Odyssey</a>, <a target="_blank" title="NASA's Dawn spacecraft" href="http://dawn.jpl.nasa.gov/">Dawn</a>, and <a target="_blank" title="NASA's Mars Science Laboratory" href="http://marsprogram.jpl.nasa.gov/msl/">MSL</a>. Both individual investigators and their students make use of SPIF resources and contribute their expertise to various programs designed for researchers, students and the general public.</p>
+
+		
 					</div>
 					<div class="clear"></div>
 				      </div>
@@ -264,7 +270,7 @@
 	                  <h2 class="title">Upcoming Events</h2>
 			</div>
 	                <div class="module-content">
-	                  
+				<div id="upcoming"></div>
 			</div>
 		      </div>
 		    </div>
