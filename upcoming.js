@@ -51,8 +51,8 @@
                                 '<p class="summary">'+curr.getHours()+':'+curr.getMinutes()+' - '+
                                 end.getHours()+':'+end.getMinutes()+'</p>';
               document.getElementById('upcoming').appendChild(div);
-              document.getElementById('upcoming').appendChild(document.createElement('br'););
-              document.getElementById('upcoming').appendChild(document.createElement('br'););
+              document.getElementById('upcoming').appendChild(document.createElement('br'));
+              document.getElementById('upcoming').appendChild(document.createElement('br'));
             }
         }
        }, function(reason) {
