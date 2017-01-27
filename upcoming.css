@@ -1,6 +1,6 @@
       time.icon
       {
-        font-size: 0.75em; /* change icon size */
+        font-size: 0.63em; /* change icon size */
         display: block;
         position: relative;
         width: 7em;
@@ -9,6 +9,7 @@
         /*margin: 2em auto;*/
         border-radius: 0.6em;
         overflow: hidden;
+        box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff;
       }
       time.icon *
       {
@@ -41,5 +42,10 @@
         font-size: 2.8em;
         letter-spacing: -0.05em;
         padding-top: 0.8em;
+        color: #2f2f2f;
+      }
+      .summary
+      {
         color: #DB4A07;
       }
+
