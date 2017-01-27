@@ -51,4 +51,8 @@
         float: left;
         margin-left: 15px;
       }
+      p.summary
+      {
+        margin-left: 15px;
+      }
 
