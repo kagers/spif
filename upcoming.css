@@ -3,8 +3,8 @@
         font-size: 0.63em; /* change icon size */
         display: block;
         position: relative;
-        width: 8em;
-        height: 9em;
+        width: 7em;
+        height: 8.9em;
         background-color: #fff;
         /*margin: 2em auto;*/
         border-radius: 0.6em;
@@ -30,21 +30,21 @@
         background-color: #DB4A07;
         border-bottom: 1px dashed #DB4A07;
         box-shadow: 0 2px 0 #DB4A07;
-        font-size: 1.2em;
+        font-size: 1.4em;
       }
       time.icon em
       {
         position: absolute;
         bottom: 0.3em;
         color: #DB4A07;
-        font-size: 1.1em;
+        font-size: 1.3em;
       }
       time.icon span
       {
         width: 100%;
         font-size: 2.5em;
         letter-spacing: -0.05em;
-        padding-top: 0.8em;
+        padding-top: 2em;
         color: #2f2f2f;
       }
       h6.summary
