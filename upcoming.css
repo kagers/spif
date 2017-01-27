@@ -10,6 +10,7 @@
         border-radius: 0.6em;
         overflow: hidden;
         box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff;
+        float:left;
       }
       time.icon *
       {
@@ -47,5 +48,6 @@
       .summary
       {
         color: #DB4A07;
+        float: left;
       }
 
