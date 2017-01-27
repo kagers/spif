@@ -49,7 +49,7 @@
                             <strong>'+months[curr.getMonth()]+'</strong>\
                             <span>'+curr.getDate()+'</span>\
                             </time>\
-                            <p>'+upcoming[i].summary+'</p>';
+                            '+upcoming[i].summary;
           document.getElementById('upcoming').appendChild(div);
         }
        }, function(reason) {
